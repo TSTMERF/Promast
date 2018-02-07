@@ -1,0 +1,30 @@
+<md-dialog id="dialog-gallery">
+        <md-toolbar>
+            <h1 class="gallery-title">Spiral Freezer</h1>
+        </md-toolbar>
+        <md-dialog-content>
+            <div layout="row" layout-xs="column" layout-gt-xs="row">
+                    <md-card>
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">Before</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <img ng-src="images/Spiralfreezer/beforeSpiralfreezer1.jpg" class="gallery-img img-responsive">
+                    </md-card>
+                    <md-card>
+                        <md-card-header>
+                            <md-card-header-text>
+                                <span class="md-title">After</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <img ng-src="images/Spiralfreezer/afterSpiralfreezer1.jpg" class=" gallery-img img-responsive">
+                    </md-card>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="answer('useful')" class="md-warn md-raised">
+                CERRAR
+            </md-button>
+        </md-dialog-actions>
+</md-dialog>

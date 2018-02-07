@@ -1,0 +1,172 @@
+<md-content md-page-header id="newE" ng-controller="newController">
+	<!--nav header-->
+	<div >
+    <md-toolbar scroll id="nav-header" layout="row" layout-align="space-around center">
+      <div  md-header-title class="company">Promast Inc.</div>
+      <div id="btnGroup"  class="btn-group btn-group-lg" role="group">
+          <button type="button" class="btn btn-secondary" ng-click="home()">Home</button> 
+          <button type="button" class="btn btn-secondary" ng-click="about()">About Us</button>
+          <button type="button" class="btn btn-secondary" ng-click="contact()">Contact Us</button>
+          <button type="button" class="btn btn-secondary" ng-click="new()">New Equipment</button>
+          <button type="button" class="btn btn-secondary" ng-click="mp()">MP Equipment</button>
+          <button  type="button" class="btn btn-secondary" ng-click="contact()">
+              <md-icon class="material-icons call-icon" >call</md-icon>
+              Call us: (416)258-9915
+          </button>
+      </div>
+    </md-toolbar>
+  </div>
+	<!--section new Equipment-->
+	<section layout-align="center center">
+		<md-toolbar class="promast-head "> 
+      <h1>New Equipment</h1>
+      <h3 class="text-muted-head">Promas Inc.</h3>
+      <h5 class="text-muted-subhead">Complete engineering solutions</h5>
+    </md-toolbar>  
+    <div class="container-cards">
+   		<div  layout="row" layout-xs="column">
+   			<md-card>
+   				<md-card-header>
+   					<md-card-avatar>
+   						<img ng-src="images/promast-inc.png" class="avatar-img-new">
+   					</md-card-avatar>
+   				</md-card-header>
+   				<img ng-src="images/New Equipment/1.png">
+   				<md-card-title>
+   					<md-card-title-text>
+   					<span class="md-headline">Equipment 1</span>
+   					</md-card-title-text>
+   				</md-card-title>
+   				<md-card-content>
+          			<p>
+            		The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            		two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          			</p>
+        		</md-card-content>
+        		<md-card-actions layout="row" layout-align="end end">
+          			<md-button type="button" ng-click="new1()">Know more</md-button>
+        		</md-card-actions>
+   			</md-card>
+   			<md-card>
+   				<md-card-header >
+   					<md-card-avatar>
+   						<img ng-src="images/promast-inc.png" class="avatar-img-new">
+   					</md-card-avatar>
+   				</md-card-header>
+   				<img ng-src="images/New Equipment/2.png">
+   				<md-card-title>
+   					<md-card-title-text>
+   					<span class="md-headline">Equipment 2</span>
+   					</md-card-title-text>
+   				</md-card-title>
+   				<md-card-content>
+          			<p>
+            		The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            		two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          			</p>
+        		</md-card-content>
+        		<md-card-actions layout="row" layout-align="end end">
+          			<md-button type="button" ng-click="new2()">Know more</md-button>
+        		</md-card-actions>
+   			</md-card>
+   		</div>
+   		<div layout="row" layout-xs="column">
+   			<md-card>
+   				<md-card-header>
+   					<md-card-avatar>
+   						<img ng-src="images/promast-inc.png" class="avatar-img-new">
+   					</md-card-avatar>
+   				</md-card-header>
+   				<img ng-src="images/New Equipment/3.png">
+   				<md-card-title>
+   					<md-card-title-text>
+   					<span class="md-headline">Equipment 3</span>
+   					</md-card-title-text>
+   				</md-card-title>
+   				<md-card-content>
+          			<p>
+            		The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            		two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          			</p>
+        		</md-card-content>
+        		<md-card-actions layout="row" layout-align="end end">
+          			<md-button type="button" ng-click="new3()">Know more</md-button>
+        		</md-card-actions>
+   			</md-card>
+   			<md-card>
+   				<md-card-header >
+   					<md-card-avatar>
+   						<img ng-src="images/promast-inc.png" class="avatar-img-new">
+   					</md-card-avatar>
+   				</md-card-header>
+   				<img ng-src="images/New Equipment/4.png">
+   				<md-card-title>
+   					<md-card-title-text>
+   					<span class="md-headline">Equipment 4</span>
+   					</md-card-title-text>
+   				</md-card-title>
+   				<md-card-content>
+          			<p>
+            		The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            		two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          			</p>
+        		</md-card-content>
+        		<md-card-actions layout="row" layout-align="end end">
+          			<md-button type="button" ng-click="new4()">Know more</md-button>
+        		</md-card-actions>
+   			</md-card>
+   		</div>
+   		<div class="col-6">
+      <div layout="column" layout-xs="column" >
+   			<md-card>
+   				<md-card-header>
+   					<md-card-avatar>
+   						<img ng-src="images/promast-inc.png" class="avatar-img-new">
+   					</md-card-avatar>
+   				</md-card-header>
+   					<img ng-src="images/New Equipment/5.png" >
+   						<md-card-title>
+   							<md-card-title-text>
+   							<span class="md-headline">Equipment 5</span>
+   							</md-card-title-text>
+   						</md-card-title>
+   						<md-card-content>
+          					<p>
+            				The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            				two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          					</p>
+        				</md-card-content>
+        				<md-card-actions layout="row" layout-align="end end">
+          					<md-button type="button" ng-click="new5()">Know more</md-button>
+        				</md-card-actions>
+   			</md-card>
+   		</div>
+      </div>
+      </div>
+   	</section>
+    <!--<hr class="footer-hr">-->
+   	<!--footer-->
+    <section id="footer" layout="column">
+        <div layout="row" layout-sx="column" layout-align="center center">
+            <md-button class="btn-footer" ng-click="about()">About Us</md-button>
+            <md-button class="btn-footer" ng-click="contact()">Contact Us</md-button>
+            <md-button class="btn-footer" ng-click="new()">New Equipment</md-button>
+            <md-button class="btn-footer" ng-click="mp()">Mp Equipment</md-button>
+        </div>
+        <div id="copy" layout="row" >
+            <div class="rightcall" layout="row"><md-icon class="material-icons call-footer" >call</md-icon><p>Call us: (416)258-9915</p></div>
+            <div layout="row" layout-align="center center">
+                <a class="btn btn-social-icon">
+                    <span class="fa fa-twitter"></span>
+                </a>
+                <a class="btn btn-social-icon">
+                    <span class="fa fa-facebook"></span>
+                </a>
+                <a class="btn btn-social-icon">
+                    <span class="fa fa-linkedin"></span>
+                </a>
+            </div>
+            <div class="leftcopy"><span class="copyright">Copyright© 2015 Promast-inc All rights reserved</span></div>
+        </div>
+    </section>
+</md-content>

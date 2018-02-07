@@ -1,0 +1,90 @@
+<md-content md-page-header id="new3" ng-controller="new3Controller">
+	<!--nav header-->
+	<div >
+	   <md-toolbar scroll id="nav-header" layout="row" layout-align="space-around center">
+            <div  md-header-title class="company">Promast Inc.</div>
+            <div id="btnGroup"  class="btn-group btn-group-lg" role="group">
+                <button type="button" class="btn btn-secondary" ng-click="home()">Home</button> 
+                <button type="button" class="btn btn-secondary" ng-click="about()">About Us</button>
+                <button type="button" class="btn btn-secondary" ng-click="contact()">Contact Us</button>
+                <button type="button" class="btn btn-secondary" ng-click="new()">New Equipment</button>
+                <button type="button" class="btn btn-secondary" ng-click="mp()">MP Equipment</button>
+                <button  type="button" class="btn btn-secondary" ng-click="contact()">
+                    <md-icon class="material-icons call-icon" >call</md-icon>
+                    Call us: (416)258-9915
+                </button>
+            </div>
+        </md-toolbar>
+    </div>
+	<md-toolbar class="toolbar-new"> Equimpent 3 </md-toolbar>
+	<!--new4-->
+	<section id="newE" layout="column">
+		<img src="images/New Equipment/3.png" class=" img-responsive new-img">
+		<div class="container-newE">
+		<div layout="'row" layout-xs="column">
+			<div layout="column" flex="40">
+				<h1 class="h1-desc">Description</h1>
+				<hr class="hr-desc">
+				<p>Lorem ipsum dolor sit amet, consectetur ad seipiscing elit,d do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<div class="datas" layout="column">
+				<div layout="row" >
+					<div>
+						<h1>Created</h1>
+						<hr>
+						<p>2014-2015</p>
+					</div>
+					<div>
+						<h1>Role</h1>
+						<hr>
+						<p>Lorem ipsum, dolor sit amet, consectetur, ad seipiscing elit</p>
+					</div>
+				</div>
+				<div class="contact-new">
+					<div >
+						<h1>Contact us</h1>
+						<hr>
+					</div>
+					<div><i class="material-icons call-new">call</i>(416)258-9915</div>
+					<p>or send us a mail</p>
+					<md-button type="button" class="md-warn md-raised" ng-click="contact()">Email us</md-button>
+				</div>
+			</div>
+		</div>
+		<div class="usage" layout-align="center center" layout="row">
+			<div>
+				<h1 class="h1-desc">Usage</h1>
+				<hr>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur ad seipiscing elit,d do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+		</div>
+		</div>
+	</section>
+	<!--footer--
+	<hr class="footer-hr">-->
+    <section id="footer" layout="column">
+        <div layout="row" layout-sx="column" layout-align="center center">
+            <md-button class="btn-footer" ng-click="about()">About Us</md-button>
+            <md-button class="btn-footer" ng-click="contact()">Contact Us</md-button>
+            <md-button class="btn-footer" ng-click="new()">New Equipment</md-button>
+            <md-button class="btn-footer" ng-click="mp()">Mp Equipment</md-button>
+        </div>
+        <div id="copy" layout="row" >
+            <div class="rightcall" layout="row"><md-icon class="material-icons call-footer" >call</md-icon><p>Call us: (416)258-9915</p></div>
+            <div layout="row" layout-align="center center">
+                <a class="btn btn-social-icon">
+                    <span class="fa fa-twitter"></span>
+                </a>
+                <a class="btn btn-social-icon">
+                    <span class="fa fa-facebook"></span>
+                </a>
+                <a class="btn btn-social-icon">
+                    <span class="fa fa-linkedin"></span>
+                </a>
+            </div>
+            <div class="leftcopy"><span class="copyright">Copyright© 2015 Promast-inc All rights reserved</span></div>
+        </div>
+    </section>
+</md-content>
