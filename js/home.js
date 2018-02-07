@@ -87,7 +87,7 @@ angular.module('homeModule',[])
 		function toolStyle(dim){
 			if(ratio(dim)<1){
         console.log('ratio<1='+ratio(dim));
-				title.css('color','white');
+				title.css('color',' #CFB091 ');
         element.css('background-color','#2A2928');
 				
 			}
