@@ -91,8 +91,9 @@ div#carouselHeader .carousel-indicators > li.active{
     background-color:yellow;
     border-color:orange;
 }
-div#carouselHeader .carousel-inner{
-    height:100%;
+div#carouselHeader .carousel-inner .item{
+        height:100%;
+        width: 100%;
 }
 div#carouselHeader .carousel-inner img{
     background-position:center;
@@ -102,7 +103,6 @@ div#carouselHeader .carousel-inner img{
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    display: block;
     float:right; 
 }
 div#carouselHeader .carousel-inner .item .captionCarousel img,
@@ -122,8 +122,7 @@ div#carouselHeader .carousel-inner .item .img-newE{
     margin-top:150px;
 }
 div#carouselHeader .carousel-inner .item .img-first{
-    width:90%;
-    /*background-color: transparent;*/
+    width:90%; height: auto
 }
 div#carouselHeader .carousel-inner .item .captionCarousel .MPlogo{
     margin-top:250px; 
@@ -155,21 +154,26 @@ div#carouselHeader .carousel-inner .item .captionCarousel .p-subtitle{
     left:150px; 
     top:250px;
 }
-div#carouselHeader .carousel-control-promast{
+div#carouselHeader .carousel-control.carousel-promast{
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 50%;
+    bottom: 50%;
     left: 0;
     width: 5%;
-    font-size: 20px;
-    color: #fff;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
     background-color: rgba(0, 0, 0, 0);
     filter: alpha(opacity=50);
     opacity: .5;
     z-index:5;
-    font-size:0px;
+}
+div#carouselHeader .carousel-control.carousel-promast i{
+    font-size: 100px;
+    color: black;
+}
+div#carouselHeader .carousel-control.right {
+  right: 0;
+  left: auto;
 }
 /************************/
 /*      CONTACT         */
