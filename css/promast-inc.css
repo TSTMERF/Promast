@@ -208,70 +208,123 @@ md-dialog#contact{
     padding-right:10%;
     border-radius:10%; 
 }
+md-dialog#contact div{
+    width: 100%;
+    height:auto;
+}
 md-dialog#contact h2{ 
     align-self:flex-start; 
     font-size:40px; 
     font-weight:bold;
-    padding:30px; 
+    padding:30px 0px 30px 0px; 
 }
-md-dialog#contact .btn-close{
-    align-self: flex-end;
+md-dialog#contact div .btn-close{
+
+    border-width:0px;
+    box-shadow: none;
     background-color: transparent;
     color:black;
+
 }
 md-dialog#contact .form-group {
-    padding: 10px;
+    padding: 20px 10px 20px 10px;
 }
 md-dialog#contact .form-group input.form-control{
     border-width:0px; 
+    border-bottom:2px solid grey; 
     box-shadow:none; 
-    border-bottom:5px;
-    border-color:grey; 
+    color:black;
+    font-size: 20px;
 }
 md-dialog#contact .form-group label{
 	color:grey;
     font-size:20px;
 }
-md-dialog#contact .form-group input.form-control::-moz-placeholder{
+md-dialog#contact .form-group .form-control:focus {
+    border-bottom:2px solid red; 
+}
+md-dialog#contact .form-group input::-webkit-input-placeholder {
     color:black;
-    font-weight:bold;
+    font-size:15px;
+    font-weight: bold;
 }
-md-dialog#contact .form-control:focus {
-    border-color: red;
-    border-bottom:5px; 
-}
-
-md-dialog#contact::-webkit-input-placeholder {
-    text-transform: uppercase;
+md-dialog#contact .form-group input:-moz-placeholder {
     color:black;
-    font-size:30px;
+    font-size:15px;
+    font-weight: bold;
 }
-
-/*section#contact input::-moz-placeholder {
+md-dialog#contact .form-group input::-moz-placeholder{
     color:black;
-    text-transform: uppercase;
-    font-family: 'Quicksand', sans-serif;
+    font-size:15px;
+    font-weight: bold;
 }
-
-section#contact input:-moz-placeholder {
+md-dialog#contact .form-group input:-ms-input-placeholder {
     color:black;
-    text-transform: uppercase;
-    font-family: 'Quicksand', sans-serif;
+    font-size:15px;
+    font-weight: bold;
 }
-section#contact:-ms-input-placeholder {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
+md-dialog#contact .form-group textarea.form-control{
+    border-width:0px; 
+    border-bottom:2px solid grey; 
+    box-shadow:none; 
+    height:150px;
+    padding-bottom:100px; 
+    color:black;
+    font-size:20px;
 }
-*/
-md-dialog#contact .text-danger {
-    color: #e74c3c;
+md-dialog#contact .form-group textarea.form-control::placeholder{
+    color:black;
+    font-size:15px;
+    font-weight: bold;   
 }
-md-dialog#contact div#success{
-   align-self: flex-end;
+md-dialog#contact .form-group textarea.form-control::-webkit-input-placeholder{
+    color:black;
+    font-size:15px;
+    font-weight: bold;  
 }
-
+md-dialog#contact .form-group textarea.form-control:-moz-placeholder{
+    color:black;
+    font-size:15px;
+    font-weight: bold; 
+}
+md-dialog#contact .form-group textarea.form-control::-moz-placeholder{
+    color:black;
+    font-size:15px;
+    font-weight: bold; 
+}
+md-dialog#contact .form-group textarea.form-control:-ms-input-placeholder {
+    color:black;
+    font-size:15px;
+    font-weight: bold; 
+}
+md-dialog#contact div#success {
+    padding-top:50px; 
+    width:100%;
+}
+md-dialog#contact div#success .btn-send{
+    background-color:#E95035 ;
+    color:white;
+    box-shadow:20px 20px 50px 10px pink;
+    font-size:20px;
+    padding:0px 30px 0px 30px;
+    border-radius :10% 0% 0% 10%;
+    padding-bottom:10px; 
+}
+md-dialog#contact div#success  i{
+    padding:10px 0px 10px 0px ;
+    align-self: center;
+    color:white;
+    background-color:#E95035; 
+    border-radius :0% 10% 10% 0%;
+}
+md-dialog#contact .FQ{
+    padding-top:50px; 
+    font-size:20px;
+    color:gray;
+}
+md-dialog#contact .FQ span{
+    color:blue;
+}
 /************************/
 /*     HEADS            */
 /************************/

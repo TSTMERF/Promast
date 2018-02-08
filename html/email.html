@@ -1,37 +1,44 @@
 <md-dialog id="contact">
 	<div layout="row">
-	<h2>Contact Us</h2>
-	<md-dialog-actions>
-		<span flex></span>
-			<md-button ng-click="answer('useful')" class="md-primary md-raised btn-close">
-				<i class="material-icons">close</i>
-			</md-button>
-	</md-dialog-actions>
+		<h2 class="col-6">Contact Us</h2>
+		<div layout-align="end start" class="col-6"> 	
+			<md-dialog-actions>
+				<md-button ng-click="answer('useful')" class="md-primary md-raised btn-close">
+					<i class="material-icons">close</i>
+				</md-button>
+			</md-dialog-actions>
+		</div>
 	</div>
 	<md-dialog-content>
 		<div class="container">
 			<form method="post" name="contactform" role="form" ng-submit="submit(input)">
 				<div layout="row">
-				<div class="form-group">
-					<label>Name</label>
-					<input ng-model="input.name" type="text" class="form-control" placeholder="Enter your name" id="name" name="name" required>
-					<p class="help-block text-danger"></p>
-				</div>
-				<div class="form-group">
-					<label>Email</label>
-					<input ng-model="input.email" type="email" class="form-control" placeholder="Enter your email address" id="email" name="email" required>
-					<p class="help-block text-danger"></p>
-				</div>
+					<div class="form-group">
+						<label>Name</label>
+						<input ng-model="input.name" type="text" class="form-control" placeholder="Enter your name" id="name" name="name" required>
+						<p class="help-block text-danger"></p>
+					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input ng-model="input.email" type="email" class="form-control" placeholder="Enter your email address" id="email" name="email" required>
+						<p class="help-block text-danger"></p>
+					</div>
 				</div>
 				<div class="form-group">
 					<label>Message</label>
-					<textarea ng-model="input.Message" class="form-control" placeholder="Tu mensaje *" id="Message" name="Message" required></textarea>
+					<textarea ng-model="input.Message" class="form-control" placeholder="Your message here ..." id="Message" name="Message" required></textarea>
 					<p class="help-block text-danger"></p>
 				</div>
-				<div id="success">
-					<button type="submit" name="submit" value="submit" ng-disabled="submitButtonDisabled"  class="btn btn-xl">Enviar mensaje</button>
+				<div id="success" layout="row">
+					<button type="submit" name="submit" value="submit" ng-disabled="submitButtonDisabled"  class="btn btn-xl btn-send">Send
+					</button>
+					<i class="material-icons">arrow_forward</i>
 				</div>
 			</form>
+			<div class="FQ">
+				For any question call: <span> (416)258-9915</span> <br>
+				3226 Lenworth Dr, Mississauga, ON L4X 2G1, Canadá 
+			</div>
 		</div>
 	</md-dialog-content>
 </md-dialog>
