@@ -104,15 +104,6 @@ angular.module('homeModule',[])
         var r=0;
          console.log('Im in ratio');
          console.log(dim);
-        if(dim.height==0){
-          r=r-5;
-          if(r<0) return 0;
-          if(r>1) return 1;  
-          if(dim.bottom==dim.height) return 1;
-          console.log('r:'+r);
-           console.log('Im in =0');
-        }
-        
         
         if(dim.height!=0){
         console.log('Im in !=0');
@@ -124,6 +115,14 @@ angular.module('homeModule',[])
         if(r<0) return 0;
         if(r>1) return 1;
       } 
+      else{
+          r=r-5;
+          if(r<0) return 0;
+          if(r>1) return 1;  
+          if(dim.bottom==dim.height) return 1;
+          console.log('r:'+r);
+           console.log('Im in =0');
+        }
       console.log('number:'+Number(r.toString().match(/^\d+(?:\.\d{0,2})?/)));
       return Number(r.toString().match(/^\d+(?:\.\d{0,2})?/));
 

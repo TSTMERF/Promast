@@ -18,7 +18,8 @@ angular.module('app',[
 	'mp1Module',
 	'mp2Module',
 	'mp3Module',
-	'mp4Module'
+	'mp4Module',
+	'mapModule'
 
 ])
 //configurate the module

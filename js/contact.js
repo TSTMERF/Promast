@@ -13,14 +13,15 @@ angular.module('contactModule',[])
 
 /*CONTROLLER*/
 .controller('contactController', function($route,$window,$scope,$location,$anchorScroll,$http,$mdDialog, $interval){
- 	$scope.currentNavItem='contact'; 
+ 	
+    $scope.currentNavItem='contact'; 
     //Contact section-------------------------------------------------------
 	$scope.result = 'hidden'
   	$scope.resultMessage;
 	//$scope.input; //formData is an object holding the name, email, subject, and message
 	$scope.submitButtonDisabled = false;
 	$scope.submitted = false; //used so that form errors are shown only after the form has been submitted
-	$scope.submit = function(input) {
+    $scope.submit = function(input) {
 		//alert('Form submitted with' + JSON.stringify(input));
     	$scope.submitted = true;
     	$scope.submitButtonDisabled = true;
@@ -67,4 +68,31 @@ angular.module('contactModule',[])
         $location.path('/mp/');
         $window.scrollTo(0,0);
     }
+    $scope.ShowBtn=true;
+    $scope.email = function(ev){
+        $scope.ShowBtn=false;
+        $mdDialog.show({
+            controller: DialogController,
+            templateUrl: 'html/email.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true
+        })
+        .then(function(answer) {
+            $window.scrollTo(0,0);
+            $scope.ShowBtn=true;
+            $scope.status = 'You said the information was "' + answer + '".';
+          }, function() {
+            $window.scrollTo(0,0);
+              $scope.status = 'You cancelled the dialog.';
+               $scope.ShowBtn=true;
+          });
+        };
+        function DialogController($scope, $mdDialog) {
+        
+        $scope.answer = function(answer) {
+           
+            $mdDialog.hide(answer); 
+        };
+      } 
 })

@@ -1,0 +1,37 @@
+<md-dialog id="contact">
+	<div layout="row">
+	<h2>Contact Us</h2>
+	<md-dialog-actions>
+		<span flex></span>
+			<md-button ng-click="answer('useful')" class="md-primary md-raised btn-close">
+				<i class="material-icons">close</i>
+			</md-button>
+	</md-dialog-actions>
+	</div>
+	<md-dialog-content>
+		<div class="container">
+			<form method="post" name="contactform" role="form" ng-submit="submit(input)">
+				<div layout="row">
+				<div class="form-group">
+					<label>Name</label>
+					<input ng-model="input.name" type="text" class="form-control" placeholder="Enter your name" id="name" name="name" required>
+					<p class="help-block text-danger"></p>
+				</div>
+				<div class="form-group">
+					<label>Email</label>
+					<input ng-model="input.email" type="email" class="form-control" placeholder="Enter your email address" id="email" name="email" required>
+					<p class="help-block text-danger"></p>
+				</div>
+				</div>
+				<div class="form-group">
+					<label>Message</label>
+					<textarea ng-model="input.Message" class="form-control" placeholder="Tu mensaje *" id="Message" name="Message" required></textarea>
+					<p class="help-block text-danger"></p>
+				</div>
+				<div id="success">
+					<button type="submit" name="submit" value="submit" ng-disabled="submitButtonDisabled"  class="btn btn-xl">Enviar mensaje</button>
+				</div>
+			</form>
+		</div>
+	</md-dialog-content>
+</md-dialog>

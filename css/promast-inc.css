@@ -34,14 +34,14 @@ md-toolbar#nav-header{
     position: fixed;
     padding-top: 40px;
     padding-bottom: 40px;
-    z-index:20; 
+    z-index:2000; 
     opacity: 1;
 }  
  md-toolbar#nav-header div.company{
     font-family: 'Quicksand', sans-serif;
     font-size:40px;
     font-style: italic;
-    z-index:10;  
+    z-index:2010;  
      color:#CFB091;
 }
 md-toolbar#nav-header div.company-contact{
@@ -49,12 +49,12 @@ md-toolbar#nav-header div.company-contact{
     font-family: 'Quicksand', sans-serif;
     font-size:40px;
     font-style: italic;
-    z-index:10;  
-    color:#CFB091;
+    z-index:2010;  
+    color:black;
 }
 div#btnGroup{   
     font-family: 'Quicksand', sans-serif;
-    z-index:10; 
+    z-index:2010; 
 }
 div#btnGroup button.btn{
     border:none;
@@ -181,69 +181,94 @@ div#carouselHeader .carousel-control.right {
 /************************/
 section#contact {
     font-family: 'Quicksand', sans-serif;
+     height:100%; width:100%;
+}
+section#contact div#map{
+    margin-top:0px;
+    height:100%; width:100%;
+}
+section#contact .btn-contact{
+    margin-top:35%;
+    left: 50%;
+    z-index:2010;
+    background-color:orange;
+    width:150px;
+    height:150px;
+    color:white;
+}
+section#contact .btn-contact i{
+     font-size:100px;
 
+} 
+md-dialog#contact{
+    font-family: 'Quicksand', sans-serif;
+    z-index:4010;
+    width: 100%; height: 100%;
+    padding-left:10%;
+    padding-right:10%;
+    border-radius:10%; 
 }
-section#contact .form-group {
-    padding-left:30%;
-    padding-right:30%;  
-    font-size:15px;
+md-dialog#contact h2{ 
+    align-self:flex-start; 
+    font-size:40px; 
+    font-weight:bold;
+    padding:30px; 
 }
-section#contact .form-group .form-control{
-    background-color:green;
-    border-radius:1; 
-    opacity:.1;
-    border-bottom-color: green; 
-    height:40px; 
+md-dialog#contact .btn-close{
+    align-self: flex-end;
+    background-color: transparent;
     color:black;
-    padding-bottom:0px; 
-    padding-top: 0px;
 }
-section#contact .form-group label{
-	color:blue;
+md-dialog#contact .form-group {
+    padding: 10px;
+}
+md-dialog#contact .form-group input.form-control{
+    border-width:0px; 
+    box-shadow:none; 
+    border-bottom:5px;
+    border-color:grey; 
+}
+md-dialog#contact .form-group label{
+	color:grey;
+    font-size:20px;
+}
+md-dialog#contact .form-group input.form-control::-moz-placeholder{
+    color:black;
     font-weight:bold;
 }
-section#contact .form-group textarea.form-control {
-    height:250px;
-    width: auto;
-    font-size:15px;
-}
-section#contact .form-control:focus {
-    border-color: blue;
-    border-width:5px; 
-    box-shadow: none;
+md-dialog#contact .form-control:focus {
+    border-color: red;
+    border-bottom:5px; 
 }
 
-section#contact::-webkit-input-placeholder {
+md-dialog#contact::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: 'Quicksand', sans-serif;
-    /*font-weight: 700;*/
-    
+    color:black;
+    font-size:30px;
 }
 
-section#contact input::-moz-placeholder {
+/*section#contact input::-moz-placeholder {
     color:black;
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
-    /*font-weight: 700;*/
 }
 
 section#contact input:-moz-placeholder {
     color:black;
     text-transform: uppercase;
     font-family: 'Quicksand', sans-serif;
-    /*font-weight: 700;*/
 }
 section#contact:-ms-input-placeholder {
     text-transform: uppercase;
-    /*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-family: 'Quicksand', sans-serif;
-    /*font-weight: 700;*/
+    font-weight: 700;
 }
-
-section#contact .text-danger {
+*/
+md-dialog#contact .text-danger {
     color: #e74c3c;
 }
-section#contact div#success{
+md-dialog#contact div#success{
    align-self: flex-end;
 }
 

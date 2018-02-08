@@ -1,5 +1,5 @@
 
-<md-content >
+<md-content ng-controller="contactController" layout="column">
     <div>
        <md-toolbar  id="nav-header" layout="row" layout-align="space-around center">
             <div  class="company-contact">Promast Inc.</div>
@@ -16,5 +16,9 @@
             </div>
         </md-toolbar>
     </div>
-
+    <section id="contact" ng-controller="mapController">
+        <div class="map" id="map" ng-show="ShowBtn">
+            <md-button class="md-fab btn-contact md-raised" ng-show="ShowBtn" ng-click="email($event)"><i class="material-icons">mail_outline</i></md-button>
+        </div>
+    </section>
 </md-content>
