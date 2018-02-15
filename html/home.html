@@ -1,7 +1,33 @@
 <md-content md-page-header ng-controller="homeController" >
 		<md-toolbar scroll id="nav-header" layout="row" layout-align="space-around center">
 			<div  md-header-title class="company">Promast Inc.</div>
-			<div id="btnGroup"  class="btn-group btn-group-lg" role="group">
+            <md-menu-bar show-xs hide-gt-xs>
+                <md-menu>
+                    <md-button ng-click="$mdMenu.open()"><i md-menu-bar class="material-icons">menu</i></md-button>
+                    <md-menu-content ng-click="$mdMenu.close()" layout-align="center center">
+                        <md-menu-item>
+                            <md-button ng-click="home()">Home</md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item>
+                            <md-button ng-click="about()">About Us</md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item>
+                            <md-button ng-click="contact()">Contact Us</md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item>
+                            <md-button ng-click="new()">New Equipment</md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item>
+                            <md-button ng-click="mp()">MP Equipment</md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </md-menu-bar>
+			<div  hide-xs  id="btnGroup"  class="btn-group btn-group-lg" role="group">
 				<button type="button" class="btn btn-secondary" ng-click="home()">Home</button>	
 				<button type="button" class="btn btn-secondary" ng-click="about()">About Us</button>
 				<button type="button" class="btn btn-secondary" ng-click="contact()">Contact Us</button>
@@ -24,7 +50,7 @@
 			<div class="item active">
 				<img src="images/promast-inc.png" class="img-first">
 			</div>
-			<div class="item" >
+			<div class="item" layout-xs="column">
 				<img src="images/MpEquipment/Infeed-Auger.png" class="img-item">
 				<div class="captionCarousel">
                     <p class="p-title-mp">Official Representative for Canada</p>
@@ -32,7 +58,7 @@
 					<md-button class="btn btn-info btn-caption" type="button" ng-click="mp()" >See more</md-button>
 				</div>
 			</div>	
-			<div class="item" >
+			<div class="item" layout-xs="column">
 				<img src="images/MpEquipment/Discharge-Auger.png" class="img-item">
 				<div class="captionCarousel">
                     <p class="p-title-mp">Official Representative for Canada</p>
@@ -40,7 +66,7 @@
 					<md-button class="btn btn-info btn-caption" type="button" ng-click="mp()">See more</md-button>
 				</div>
 			</div>
-			<div class="item" >
+			<div class="item" layout-xs="column">
 				<img src="images/New Equipment/5.png" class="img-newE">
 				<div class="captionCarousel">
 					<p class="p-title">New Equipment</p>
@@ -67,7 +93,7 @@
                     <h5 class="text-muted-subhead">Complete engineering solutions</h5>
             </md-toolbar>  
         </div>
-        <div class="container" layout="row">
+        <div class="container" layout="row" layout-xs="column">
             <md-card>
                 <img ng-src="images/services/Assessment.jpg" class="img-service">
                 <md-card-title>
@@ -149,7 +175,7 @@
         <md-toolbar class="toolbar-gallery">After/Before</md-toolbar>
    		<div class="container">
    			<div><span class="md-title">Flushing Machine</span></div>
-   			<md-grid-list md-cols="3" md-cols-sm="1" md-cols-md="2" md-cols-gt-md="3" md-row-height-gt-md="1:1" md-row-height="4:3">       	
+   			<md-grid-list md-cols="3" md-cols-xs="1" md-row-height-gt-md="1:1" md-row-height="4:3">       	
             	<md-grid-tile>
             		<div class="container-gallery">
                         <img src="images/FlushingMachine/afterFlushingMachine1.jpg" class="gallery-image">  
@@ -183,7 +209,7 @@
         	</md-grid-list>
         	<hr class="gallery-hr">
         	<div><span class="md-title">Spiral Freezer</span></div>
-        	<md-grid-list md-cols="3" md-cols-sm="1" md-cols-md="2" md-cols-gt-md="3" md-row-height-gt-md="1:1" md-row-height="4:3">       	
+        	<md-grid-list md-cols="3" md-cols-xs="1" md-row-height-gt-md="1:1" md-row-height="4:3">       	
             	<md-grid-tile>
             		<div class="container-gallery">
                         <img src="images/Spiralfreezer/afterSpiralfreezer1.jpg" class="gallery-image">  
@@ -232,15 +258,15 @@
 	<!--footer-->
 	<section id="footer" layout="column">
         <hr>
-		  <div layout="row" layout-sx="column" layout-align="center center">
+		  <div layout="row" layout-xs="column" layout-align="center center">
 		  	<md-button class="btn-footer" ng-click="about()">About Us</md-button>
 		  	<md-button class="btn-footer" ng-click="contact()">Contact Us</md-button>
 		  	<md-button class="btn-footer" ng-click="new()">New Equipment</md-button>
 		  	<md-button class="btn-footer" ng-click="mp()">Mp Equipment</md-button>
 		  </div>
-		  <div id="copy" layout="row" >
-		  	<div class="rightcall" layout="row"><md-icon class="material-icons call-footer" >call</md-icon><p>Call us: (416)258-9915</p></div>
-		  	<div layout="row" layout-align="center center">
+		  <div id="copy" layout="row" layout-xs="column" layout-align-xs="center center">
+		  	<div  class="rightcall" layout="row"><md-icon class="material-icons call-footer" >call</md-icon><p>Call us: (416)258-9915</p></div>
+		  	<div  layout="row" layout-align="center center">
 		  		<a class="btn btn-social-icon">
     	   			<span class="fa fa-twitter"></span>
   		    		</a>
@@ -251,7 +277,9 @@
     	   			<span class="fa fa-linkedin"></span>
   		    		</a>
 		  	</div>
-		  	<div class="leftcopy"><span class="copyright">Copyright© 2015 Promast-inc All rights reserved</span></div>
+		  	<div  class="leftcopy">
+            <span class="copyright">Copyright© 2015 Promast-inc All rights reserved</span>
+            </div>
 		  </div>
     </section>
 </md-content>

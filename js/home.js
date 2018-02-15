@@ -43,18 +43,22 @@ angular.module('homeModule',[])
 				'html/contact.html',
 				'html/newEquipment.html',
 				'html/mpEquipment.html',
-				'html/newEquipment/new1.html',
-				'html/newEquipment/new2.html',
-				'html/newEquipment/new3.html',
-				'html/newEquipment/new4.html',
-				'html/newEquipment/new5.html',
-				'html/gallery/flushing1.html',
-				'html/gallery/flushing2.html',
-				'html/gallery/flushing3.html',
-				'html/gallery/spiral1.html',
-				'html/gallery/spiral2.html',
-				'html/gallery/spiral3.html',
-				'html/gallery/spiral4.html'
+        'html/mpEquipment/mp1.html',
+        'html/mpEquipment/mp2.html',
+        'html/mpEquipment/mp3.html',
+        'html/mpEquipment/mp4.html',
+        'html/newEquipment/new1.html',
+        'html/newEquipment/new2.html',
+        'html/newEquipment/new3.html',
+        'html/newEquipment/new4.html',
+        'html/newEquipment/new5.html',
+        'html/gallery/flushing1.html',
+        'html/gallery/flushing2.html',
+        'html/gallery/flushing3.html',
+        'html/gallery/spiral1.html',
+        'html/gallery/spiral2.html',
+        'html/gallery/spiral3.html',
+        'html/gallery/spiral4.html'
 			];
 			loadTemplate(templates,function(){
 				//clear the element
@@ -75,13 +79,15 @@ angular.module('homeModule',[])
 .directive('scroll', function($window){
 	return function(scope,element, attrs){
 		/* header DOM element with md-page-header attribute*/
-    var header   		= document.querySelector('[md-page-header]');
+    var header    	   	= document.querySelector('[md-page-header]');
     /* Store header dimensions to initialize header styling */
     var baseDimensions 	= header.getBoundingClientRect();
     /* DOM element with md-header-title attribute (title in toolbar) */
     var title          	= angular.element(document.querySelector('[md-header-title]'));
+    /*DOM element with md-menu bar attribute*/
+    var menu            =angular.element(document.querySelector('[md-menu-bar]'));
 		/*height of the toolbar by default*/
-		 var legacyToolbarH = 64;
+    var legacyToolbarH = 64;
 
 		/*defining function toolStyle for changes*/
 		function toolStyle(dim){
@@ -89,39 +95,28 @@ angular.module('homeModule',[])
         console.log('ratio<1='+ratio(dim));
 				title.css('color',' #CFB091 ');
         element.css('background-color','#2A2928');
-				
+        menu.css('color','orange');
 			}
 			if(ratio(dim)==1){
         console.log('ratio'+ratio(dim));
 				title.css('color','black');
         element.css('background-color','transparent');
-			
+			   menu.css('color','black');
 			}
 		}
     toolStyle(baseDimensions);
 		/*defining the radio function*/
 		function ratio(dim) {
         var r=0;
-         console.log('Im in ratio');
-         console.log(dim);
-        
         if(dim.height!=0){
-        console.log('Im in !=0');
-        r = (dim.bottom+baseDimensions.top)/dim.height;
-        console.log('bottom:'+dim.bottom);
-        console.log('top:'+baseDimensions.top);
-        console.log('height:'+dim.height);
-        console.log('r:'+r);
-        if(r<0) return 0;
-        if(r>1) return 1;
-      } 
-      else{
+          r = (dim.bottom+baseDimensions.top)/dim.height;
+          if(r<0) return 0;
+          if(r>1) return 1;
+        } 
+        else{
           r=r-5;
           if(r<0) return 0;
           if(r>1) return 1;  
-          if(dim.bottom==dim.height) return 1;
-          console.log('r:'+r);
-           console.log('Im in =0');
         }
       console.log('number:'+Number(r.toString().match(/^\d+(?:\.\d{0,2})?/)));
       return Number(r.toString().match(/^\d+(?:\.\d{0,2})?/));
@@ -146,7 +141,7 @@ angular.module('homeModule',[])
 	};
 })
 //defining controller
-.controller('homeController', function($scope, $window,$location,$mdDialog){
+.controller('homeController', function($scope, $window,$location,$mdDialog,$mdMenu){
 	$scope.currentNavItem='home'; 
 	//links to others pages
 	$scope.about= function(){

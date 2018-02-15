@@ -42,7 +42,7 @@ md-toolbar#nav-header{
     font-size:40px;
     font-style: italic;
     z-index:2010;  
-     color:#CFB091;
+    color:#CFB091;
 }
 md-toolbar#nav-header div.company-contact{
 
@@ -72,7 +72,15 @@ div#btnGroup button .call-icon{
     color:blue; 
     size:10px;
 }
-
+/*md-toolbar#nav-header md-menu{ background-color:transparent; margin:0px; }
+md-toolbar#nav-header md-menu i{ font-size:50px; color:black; }*/
+@media screen and (max-width:680px){
+    md-toolbar#nav-header div.company{font-size:20px;}
+    md-toolbar#nav-header div.company-contact{font-size:20px;}
+    md-toolbar#nav-header md-menu{ background-color:transparent; margin:0px;}
+    md-toolbar#nav-header md-menu i{ font-size:50px; color:#CFB091; }
+    md-toolbar#nav-header md-menu-content md-menu-item{    z-index:2010;  }
+}
 /************************/
 /*      CAROUSEL        */
 /************************/
@@ -176,6 +184,20 @@ div#carouselHeader .carousel-control.right {
   right: 0;
   left: auto;
 }
+@media screen and (max-width:680px){
+    div#carouselHeader{width:100%;}
+    div#carouselHeader .carousel-inner .item{padding-top:50px; width:100%; }
+    div#carouselHeader .carousel-control.carousel-promast i{font-size:20px;}
+    div#carouselHeader .carousel-inner .item .img-first{width:90%;}
+    div#carouselHeader .carousel-inner .item .img-item{width:100%; height:auto; }
+    div#carouselHeader .carousel-inner .item .img-newE{width:90%; height:auto;}
+    div#carouselHeader .carousel-inner .item .captionCarousel .MPlogo{width:50%; margin-top:350px;  }
+    div#carouselHeader .carousel-inner .item .captionCarousel .p-title-mp{font-size:20px; top:300px;}
+    div#carouselHeader .carousel-inner .item .captionCarousel  .btn-caption{font-size:15px; top:205px;}
+    div#carouselHeader .carousel-inner .item .captionCarousel .p-title{color:#B55A46 ; font-weight:bold;  font-size:15px;top:150px;}
+    div#carouselHeader .carousel-inner .item .captionCarousel .p-subtitle{color:#B55A46; font-weight:bold;  font-size:15px;top:170px;}
+    div#carouselHeader .carousel-inner .item .captionCarousel .btn-newE-caption{font-size:15px; top:70px; }
+}
 /************************/
 /*      CONTACT         */
 /************************/
@@ -188,8 +210,8 @@ section#contact div#map{
     height:100%; width:100%;
 }
 section#contact .btn-contact{
-    margin-top:35%;
-    left: 50%;
+    top:30em;
+    left:50%;
     z-index:2010;
     background-color:orange;
     width:150px;
@@ -204,9 +226,9 @@ md-dialog#contact{
     font-family: 'Quicksand', sans-serif;
     z-index:4010;
     width: 100%; height: 100%;
-    padding-left:10%;
-    padding-right:10%;
-    border-radius:10%; 
+    padding-left:1%;
+    padding-right:1%;
+    border-radius:3%; 
 }
 md-dialog#contact div{
     width: 100%;
@@ -306,9 +328,8 @@ md-dialog#contact div#success .btn-send{
     color:white;
     box-shadow:20px 20px 50px 10px pink;
     font-size:20px;
-    padding:0px 30px 0px 30px;
-    border-radius :10% 0% 0% 10%;
-    padding-bottom:10px; 
+    padding:0px 30px 10px 30px;
+    border-radius :10% 0% 0% 10%; 
 }
 md-dialog#contact div#success  i{
     padding:10px 0px 10px 0px ;
@@ -324,6 +345,23 @@ md-dialog#contact .FQ{
 }
 md-dialog#contact .FQ span{
     color:blue;
+}
+@media screen and (max-width:680px){
+    section#contact .btn-contact{
+        top:20em;
+        width:50px;
+        height:50px;
+    }
+    section#contact .btn-contact i{font-size:40px;} 
+    md-dialog#contact h2{ 
+        font-size:20px; 
+        padding:10px 0px 10px 0px; 
+    }
+    md-dialog#contact .form-group label{ font-size:15px;}
+    md-dialog#contact .form-group input.form-control{font-size:10px; }
+    md-dialog#contact div#success .btn-send{font-size:15px; padding:0px; }
+
+
 }
 /************************/
 /*     HEADS            */
@@ -433,9 +471,6 @@ section#newE p{
     text-align: justify;
     padding-top:20px; 
 }
-section#newE img{
-    padding:50px;
-}
 section#newE hr{
     border-color: black; 
 }
@@ -466,12 +501,21 @@ section#newE .usage div{
     padding-right:50px; 
 }
 section#newE .new-img{
-    width:60%; height: auto;
+    width:60%; 
+    height: auto;
     align-self: center;
+    padding:50px;
 }
 section#newE .container-newE{
     padding-left:15%; 
     padding-right:15%;
+}
+@media screen and (max-width:680px){
+    md-content#newE .container-cards{ padding-right:2%; padding-left:2%;}
+    section#newE .container-newE{padding-right:2%; padding-left:2%;}
+    section#newE .new-img{width:100%; height: auto; padding-bottom: 0px;}
+    section#newE .datas div{padding: 0px 5px 10px 10px;}
+    section#newE .container-newE div.desc{padding-top:150px; }
 }
 /************************/
 /*      MP EQUIPMENT    */
@@ -482,7 +526,7 @@ md-content#MP .container-cards{
 }
 md-content#MP md-card{
     font-family: 'Quicksand', sans-serif;
-    padding: 10px 30px 10px 30px; 
+    padding: 10px 30px 10px 30px ; 
     margin: 10px 30px 10px 30px; 
 }
 md-content#MP md-card md-card-avatar{
@@ -493,6 +537,9 @@ md-content#MP md-card md-card-content p {
 }
 md-content#MP md-card md-card-avatar img.avatar-img-new{
     width:200px;
+}
+@media screen and (max-width:680px){
+    md-content#MP .container-cards{padding-right:0px; padding-left:0px;}
 }
 /************************/
 /*        GALERY        */
@@ -529,9 +576,6 @@ div#gallery{
     height: 100%;
     width:100%;
 }
-.Overlay:hover.Overlay-title h3{
-    top:20px;
-}
 .gallery-hr{
     width:90%; 
     margin-top:20px;
@@ -554,6 +598,10 @@ md-dialog#dialog-gallery md-toolbar{background-color: #2A2928; margin:0px;}
 md-dialog#dialog-gallery .gallery-title{font-size:40px;}
 md-dialog#dialog-gallery md-card .gallery-img{ width:100%; height:auto;}
 
+@media screen and (max-width:680px){
+    md-dialog#dialog-gallery .gallery-title{font-size:30px; }
+    .Overlay img{ width:90%; height: auto; }
+}
 /************************/
 /*      ABOUT US        */
 /************************/
@@ -596,6 +644,12 @@ section#about .us p{
 }
 section#about md-content{
     overflow-y:hidden; 
+}
+@media screen and (max-width:680px){
+    section#about .img-logo{
+        width:70%;
+        height:auto; 
+    }
 }
 /************************/
 /*      FOOTER          */
@@ -641,4 +695,12 @@ div#copy .rightcall{
 }
 hr.footer-hr{
     border-color:black; 
+}
+@media screen and (max-width:680px){
+    section#footer {width:100%;height:350px;}
+    .btn-footer{font-size:10px; margin: 0px;}
+    .copyright{font-size:10px;}
+    div#copy{padding-top:10px; }
+    div#copy div{padding:10px}
+    div#copy .rightcall{font-size:10px;}
 }

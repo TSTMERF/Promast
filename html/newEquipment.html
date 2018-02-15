@@ -3,16 +3,42 @@
 	<div >
     <md-toolbar scroll id="nav-header" layout="row" layout-align="space-around center">
       <div  md-header-title class="company">Promast Inc.</div>
-      <div id="btnGroup"  class="btn-group btn-group-lg" role="group">
-          <button type="button" class="btn btn-secondary" ng-click="home()">Home</button> 
-          <button type="button" class="btn btn-secondary" ng-click="about()">About Us</button>
-          <button type="button" class="btn btn-secondary" ng-click="contact()">Contact Us</button>
-          <button type="button" class="btn btn-secondary" ng-click="new()">New Equipment</button>
-          <button type="button" class="btn btn-secondary" ng-click="mp()">MP Equipment</button>
-          <button  type="button" class="btn btn-secondary" ng-click="contact()">
-              <md-icon class="material-icons call-icon" >call</md-icon>
-              Call us: (416)258-9915
-          </button>
+            <md-menu-bar show-xs hide-gt-xs>
+                <md-menu>
+                    <md-button ng-click="$mdMenu.open()"><i md-menu-bar class="material-icons">menu</i></md-button>
+                    <md-menu-content ng-click="$mdMenu.close()" layout-align="center center">
+                        <md-menu-item>
+                            <md-button ng-click="home()">Home</md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item>
+                            <md-button ng-click="about()">About Us</md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item>
+                            <md-button ng-click="contact()">Contact Us</md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item>
+                            <md-button ng-click="new()">New Equipment</md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item>
+                            <md-button ng-click="mp()">MP Equipment</md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </md-menu-bar>
+      <div  hide-xs  id="btnGroup"  class="btn-group btn-group-lg" role="group">
+        <button type="button" class="btn btn-secondary" ng-click="home()">Home</button> 
+        <button type="button" class="btn btn-secondary" ng-click="about()">About Us</button>
+        <button type="button" class="btn btn-secondary" ng-click="contact()">Contact Us</button>
+        <button type="button" class="btn btn-secondary" ng-click="new()">New Equipment</button>
+                <button type="button" class="btn btn-secondary" ng-click="mp()">MP Equipment</button>
+        <button  type="button" class="btn btn-secondary" ng-click="contact()">
+          <md-icon class="material-icons call-icon" >call</md-icon>
+          Call us: (416)258-9915
+        </button>
       </div>
     </md-toolbar>
   </div>
@@ -116,7 +142,7 @@
         		</md-card-actions>
    			</md-card>
    		</div>
-   		<div class="col-6">
+   		<div class="col-xs-12 col-md-6 " >
       <div layout="column" layout-xs="column" >
    			<md-card>
    				<md-card-header>
