@@ -108,6 +108,7 @@ angular.module('homeModule',[])
 		/*defining the radio function*/
 		function ratio(dim) {
         var r=0;
+        console.log(dim);
         if(dim.height!=0){
           r = (dim.bottom+baseDimensions.top)/dim.height;
           if(r<0) return 0;

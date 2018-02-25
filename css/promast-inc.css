@@ -45,7 +45,6 @@ md-toolbar#nav-header{
     color:#CFB091;
 }
 md-toolbar#nav-header div.company-contact{
-
     font-family: 'Quicksand', sans-serif;
     font-size:40px;
     font-style: italic;
@@ -79,7 +78,21 @@ md-toolbar#nav-header md-menu i{ font-size:50px; color:black; }*/
     md-toolbar#nav-header div.company-contact{font-size:20px;}
     md-toolbar#nav-header md-menu{ background-color:transparent; margin:0px;}
     md-toolbar#nav-header md-menu i{ font-size:50px; color:#CFB091; }
-    md-toolbar#nav-header md-menu-content md-menu-item{    z-index:2010;  }
+    md-toolbar#nav-header md-menu-content md-menu-item{ font-size:30px;  }
+     /*md-toolbar#nav-header md-menu-content md-menu-item .md-primary.btn-menu{
+        font-family: 'Quicksand', sans-serif;
+    }*/
+    md-toolbar#nav-header .md-warn.btn-contact{ color:#CFB091;}
+    md-toolbar#nav-header .md-warn.btn-contact i{ font-size:50px;}
+    /************************/
+    /*      MENU DIALOG     */
+    /************************/
+    md-dialog#menu{}
+    md-dialog#menu md-dialog-content{ font-family: 'Quicksand', sans-serif; padding: 0px; margin:0px;}
+    md-dialog#menu md-dialog-content md-divider{padding: 0px; margin:0px;}
+    md-dialog#menu md-dialog-content .menu-btn{
+        text-transform: capitalize !important;/*For Lower case use lowercase*/
+    }
 }
 /************************/
 /*      CAROUSEL        */

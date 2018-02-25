@@ -52,7 +52,6 @@ angular.module('contactModule',[])
         $window.scrollTo(0,0);
     }
     $scope.contact= function(){
-
         $location.path('/contact/');
         $window.scrollTo(0,0);
     }
@@ -95,5 +94,29 @@ angular.module('contactModule',[])
             $mdDialog.hide(answer); 
         };
       }
-     
+      /*responsive menu display*/
+     $scope.menuOpen = function(ev){
+        $scope.ShowBtn=false;
+        $mdDialog.show({
+            controller: DialogController,
+            templateUrl: 'html/menu_contact.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true
+        })
+        .then(function(answer) {  
+            $scope.ShowBtn=true;
+            $scope.status = 'You said the information was "' + answer + '".';
+            
+          }, function() {
+            $scope.ShowBtn=true;
+            $scope.status = 'You cancelled the dialog.';
+          });
+        };
+
+        function DialogController($scope, $mdDialog) {
+        $scope.answer = function(answer) {
+            $mdDialog.hide(answer); 
+        }
+        }; 
 })

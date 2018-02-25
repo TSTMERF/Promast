@@ -1,0 +1,13 @@
+<md-dialog id="menu" layout-align="center center" ng-controller="contactController">
+	<md-dialog-content layout-align="center center">
+		<md-button ng-click="home();answer('ended');" class="menu-btn">Home</md-button>               
+		<md-divider></md-divider>                        
+		<md-button ng-click="about();answer('ended');" class="menu-btn">About Us</md-button>
+		<md-divider></md-divider>
+		<md-button ng-click="contact();answer('ended');" class="menu-btn">Contact Us</md-button>
+		<md-divider></md-divider>
+		<md-button ng-click="new();answer('ended');" class="menu-btn">New Equipment</md-button>
+		<md-divider></md-divider>
+		<md-button ng-click="mp();answer('ended');" class="menu-btn">MP Equipment</md-button>
+	</md-dialog-content>
+</md-dialog>
